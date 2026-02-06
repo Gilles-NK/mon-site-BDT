@@ -1,0 +1,462 @@
+/* Devis Page Specific Styles */
+
+/* Active button */
+.btn-primary.active {
+    background: linear-gradient(135deg, #0052a3, #00
+
+7acc);
+}
+
+/* Devis Hero Section */
+.devis-hero {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.devis-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Image/6.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.9) 0%, rgba(0, 163, 224, 0.85) 100%);
+}
+
+.devis-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--white);
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.devis-hero-content h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.devis-hero-content p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+/* Devis Section */
+.devis-section {
+    padding: 6rem 2rem;
+    background: var(--bg-light);
+}
+
+.devis-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.devis-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.devis-intro h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.devis-intro p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* Devis Form */
+.devis-form {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.form-section {
+    padding: 3rem;
+    border-bottom: 2px solid var(--bg-light);
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+.section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-number {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.form-row {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-row:last-child {
+    margin-bottom: 0;
+}
+
+.form-row.two-cols {
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.9rem 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.3s;
+    background: var(--white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+/* Checkbox Grid */
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.checkbox-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox-card input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.5rem 1rem;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.checkbox-icon {
+    font-size: 2.5rem;
+}
+
+.checkbox-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.checkbox-card input[type="checkbox"]:checked + .checkbox-content {
+    border-color: var(--secondary);
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.05), rgba(0, 163, 224, 0.05));
+}
+
+.checkbox-card:hover .checkbox-content {
+    border-color: var(--secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.1);
+}
+
+/* Radio Group */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.radio-option {
+    position: relative;
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-option span {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--border);
+    border-radius: 25px;
+    background: var(--white);
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.radio-option input[type="radio"]:checked + span {
+    border-color: var(--secondary);
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.radio-option:hover span {
+    border-color: var(--secondary);
+}
+
+/* Form Actions */
+.form-actions {
+    padding: 3rem;
+    background: var(--bg-light);
+    text-align: center;
+}
+
+.btn-submit-devis {
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
+    color: var(--white);
+    padding: 1.3rem 3rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 0 5px 20px rgba(0, 102, 204, 0.25);
+}
+
+.btn-submit-devis:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.35);
+}
+
+.btn-submit-devis:hover .btn-icon {
+    transform: translateX(5px);
+}
+
+.btn-icon {
+    transition: transform 0.3s;
+    font-size: 1.3rem;
+}
+
+.form-note {
+    margin-top: 1.5rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.form-message {
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    display: none;
+}
+
+.form-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.form-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+/* Trust Signals */
+.trust-signals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+    padding: 3rem;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.trust-icon {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 163, 224, 0.15));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary);
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .devis-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .devis-hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .form-section {
+        padding: 2rem;
+    }
+
+    .form-row.two-cols {
+        grid-template-columns: 1fr;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .trust-signals {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .devis-hero {
+        height: 350px;
+    }
+
+    .devis-hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .devis-hero-content p {
+        font-size: 1rem;
+    }
+
+    .devis-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .form-section {
+        padding: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .radio-group {
+        flex-direction: column;
+    }
+
+    .radio-option span {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-actions {
+        padding: 2rem 1.5rem;
+    }
+
+    .btn-submit-devis {
+        width: 100%;
+    }
+}
